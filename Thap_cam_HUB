@@ -1,0 +1,307 @@
+-- Code GUI tổng hợp
+local SaveManager = 
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V2/refs/heads/main/UiREDzV2.lua")))()
+
+       local Window = MakeWindow({
+         Hub = {
+         Title = "Thập cẩm HUB | All Script Made by zam2109 and White",
+         Animation = "Thập cẩm HUB"
+         },
+        Key = {
+        KeySystem = false,
+        Title = "Key System",
+        Description = "",
+        KeyLink = "",
+        Keys = {"zam"},
+        Notifi = {
+        Notifications = true,
+        CorrectKey = "Running the Script...",
+       Incorrectkey = "The key is incorrect",
+       CopyKeyLink = "Copied to Clipboard"
+      }
+    }
+  })
+
+       MinimizeButton({
+       Image = "http://www.roblox.com/asset/?id=87545862660793",
+       Size = {40, 40},
+       Color = Color3.fromRGB(10, 10, 10),
+       Corner = true,
+       Stroke = false,
+       StrokeColor = Color3.fromRGB(255, 0, 0)
+      })
+      
+------ Tab
+     local Tab1o = MakeTab({Name = "🔔 Information"})
+     local Tab2o = MakeTab({Name = "🔨 zam2109 HUB"})
+     local Tab3o = MakeTab({Name = "🍎 Blox Fruit"})
+     local Tab4o = MakeTab({Name = "🔴 Blade Ball"})
+     local Tab5o = MakeTab({Name = "💥 Strongest Battle"})
+     local Tab6o = MakeTab({Name = "⚽ Blue Lock Rivals"})
+     local Tab7o = MakeTab({Name = "🎭 Other Script"})
+     
+    
+------- BUTTON
+
+--------- Information Tab
+AddTextLabel(Tab1o, {
+     Name = [[❤️ Xin chào các Fan yêu dấu ❤️
+🔥 Zam làm ra HUB này để giúp lấy Script dễ dàng hơn 🔥]],
+     Callback = function()
+ end
+     })
+
+AddTextLabel(Tab1o, {
+     Name = [[📹 Youtube: https://www.youtube.com/@zam2109-Roblox 
+🛍️ Shop zam2109 Roblox:  https://urlvn.net/zvuq63y]],
+     Callback = function()
+ end
+     })
+AddTextLabel(Tab1o, {
+     Name = [[👥 Discord: https://discord.gg/3f6SUbGneC
+👑 Owner / Coder: zam2109 | 💼 Code partner: White]],
+     Callback = function()
+ end
+     })
+
+
+
+------------- zam2109 HUB Tab
+AddButton(Tab2o, {
+     Name = "FE Trolling GUI",
+    Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/zam2109/-1/refs/heads/main/i.txt'))()
+  end
+     })
+AddButton(Tab2o, {
+     Name = " Teleport Tool",
+    Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/zam2109/-1/refs/heads/main/tool_tele'))()
+  end
+     })
+ AddButton(Tab2o, {
+     Name = "Fix Lag 90%",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zam2109/-1/refs/heads/main/fix%20lag"))()
+  end
+     }) AddButton(Tab2o, {
+     Name = "Advertisment",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zam2109/zam2109-HUB/refs/heads/main/advertismentGUI"))()
+  end
+     })   AddButton(Tab2o, {
+     Name = "Speed Hub",
+    Callback = function()
+	  local Settings = {
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/zam2109/zam2109-HUB/refs/heads/main/Speed%20GUI.txt"))()
+}
+
+ end
+  }) AddButton(Tab2o, {
+     Name = "Reach ( Tăng tầm đánh khi sử dụng kiếm )",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zam2109/zam2109-HUB/refs/heads/main/Reach"))()
+  end
+     }) AddButton(Tab2o, {
+     Name = "ESP Player",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zam2109/zam2109-HUB/refs/heads/main/ESP%20Script"))()
+  end
+     })  
+
+---------- Tab Blox Fruit 
+------Main
+AddTextLabel(Tab3o, {
+     Name = "🏠 Main 🏠",
+     Callback = function()
+ end
+     })
+AddButton(Tab3o, {
+     Name = "W-azure",
+    Callback = function()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+  end
+     })
+AddButton(Tab3o, {
+     Name = "Redz HUB( Vietnamese )",
+    Callback = function()
+local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
+  end
+     })
+AddButton(Tab3o, {
+     Name = "Andepzai",
+    Callback = function()
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnDepZaiHubBeta/refs/heads/main/AnDepZaiHubNewUpdated.lua"))()
+  end
+     })
+AddButton(Tab3o, {
+     Name = "Xero",
+    Callback = function()
+getgenv().Team = "Marines"
+getgenv().Hide_Menu = false
+getgenv().Auto_Execute = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/main.lua"))()
+  end
+     })
+AddButton(Tab3o, {
+     Name = "Zis",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Zis/refs/heads/main/ZisRb3"))()
+  end
+     })
+AddButton(Tab3o, {
+     Name = "Master ( Doraemon )",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obfmoonsec/Masterhub/refs/heads/main/obf"))()
+  end
+     })
+AddButton(Tab3o, {
+     Name = "Astral",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Overgustx2/Main/refs/heads/main/BloxFruits_25.html"))()
+  end
+     })
+AddButton(Tab3o, {
+     Name = "Cokka",
+    Callback = function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua")()
+  end
+     })
+----- Kaitun
+AddTextLabel(Tab3o, {
+     Name = "⭐ Kaitun ⭐",
+     Callback = function()
+ end
+     })
+AddButton(Tab3o, {
+     Name = "Xero Kaitun ( Get Key )",
+    Callback = function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/zam2109/-1/refs/heads/main/Xero")()
+  end
+     })
+AddButton(Tab3o, {
+     Name = "Auto Farm Beli ( Farm chest ) by zam2109",
+    Callback = function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/zam2109/zam2109-HUB/refs/heads/main/Farm_Chest_HUB")()
+  end
+     })
+AddButton(Tab3o, {
+     Name = "Simple ( No Key )",
+    Callback = function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/zam2109/-1/refs/heads/main/Simple")()
+  end
+     })
+
+
+------------------------- Blade Ball Tab
+----------- Get Key
+AddTextLabel(Tab4o, {
+     Name = "🔐 Get Key 🔐",
+     Callback = function()
+ end
+     })
+AddButton(Tab4o, {
+     Name = "Lunax HUB",
+    Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Alexisisback/Lunax/refs/heads/main/Loader.lua'))()
+  end
+     })
+----------- No Key
+AddTextLabel(Tab4o, {
+     Name = "🔓 No Key 🔓",
+     Callback = function()
+ end
+     })
+
+-------------------------- Strongest Battle
+----------- Get Key
+AddTextLabel(Tab5o, {
+     Name = "🔐 Get Key 🔐",
+     Callback = function()
+ end
+     })
+------------- No key
+AddTextLabel(Tab5o, {
+     Name = "🔓 No Key 🔓",
+     Callback = function()
+ end
+     })
+AddButton(Tab5o, {
+     Name = "ANTI HIT, ULTRA INSTINCT",
+    Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/JYn4De0C/raw"))()
+  end
+     })
+
+
+------------------- BLUE LOCK RIVALS
+----------- Get Key
+AddTextLabel(Tab6o, {
+     Name = "🔐 Get Key 🔐",
+     Callback = function()
+ end
+     })
+AddButton(Tab6o, {
+     Name = "EXPRESS HUB",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Theyfwdan/Theyfwdan/refs/heads/main/ExpressHubPaidVersion"))() 
+  end
+     })
+AddButton(Tab6o, {
+     Name = "Alchemy HUB",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/x2-Neptune/AlchemyHub/main/Main.lua"))() 
+  end
+     })
+------------- No key
+AddTextLabel(Tab6o, {
+     Name = "🔓 No Key 🔓",
+     Callback = function()
+ end
+     })
+AddButton(Tab6o, {
+     Name = "TBAO HUB",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/game/refs/heads/main/TbaoHubBlueLockRivals"))() 
+  end
+     })
+
+-----------------------------other Tab  
+AddButton(Tab7o, {
+     Name = " Teleport Player GUI",
+    Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Infinity2346/Tect-Menu/main/Teleport%20Gui.lua'))()
+  end
+     })
+AddButton(Tab7o, {
+     Name = " Fly GUI",
+    Callback = function()
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+  end
+     })   AddButton(Tab7o, {
+     Name = " Invisible GUI",
+    Callback = function()
+loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
+  end
+     })AddButton(Tab7o, {
+     Name = "Ifinity Yield",
+    Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+  end
+     }) AddButton(Tab7o, {
+     Name = "Better Be than this ( Fake Gamepass )",
+    Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/BaconBossScript/Crazy/main/Crazy'),true))()
+  end
+     })  AddButton(Tab7o, {
+     Name = "Rewrite",
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Just-A-Script-Rewrite-12363"))()
+  end
+     })
