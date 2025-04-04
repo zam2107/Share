@@ -12,7 +12,7 @@ getgenv().Configs = {
         ["When x2 Exp Expired"] = false
     },
     ["Hop"] = { -- premium only
-        ["Enable"] = true,
+        ["Enable"] = false,
         ["Hop Find Tushita"] = true,
         ["Hop Find Valkyrie Helm"] = true,
         ["Hop Find Mirror Fractal"] = true
