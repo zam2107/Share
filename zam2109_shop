@@ -1,0 +1,255 @@
+getgenv().ConfigsKaitun = {
+    ["Safe Mode"] = false, -- Will be pass all anti cheat (but slow farm)
+    
+    ["Melee"] = {
+        ["Death Step"] = true,
+        ["Electric Claw"] = true,
+        ["Dragon Talon"] = true,
+        ["Sharkman Karate"] = true,
+        ["Superhuman"] = true,
+        ["God Human"] = true,
+    },
+
+    ["Sword"] = {
+        -- : World 1
+        ["Saber"] = true,
+        ["Pole"] = false,
+        -- : World 2
+        ["Midnight Blade"] = true,
+        ["Shisui"] = true,
+        ["Saddi"] = true,
+        ["Wando"] = true,
+        ["Rengoku"] = true,
+        ["True Triple Katana"] = true,
+        -- : World 3
+        ["Yama"] = true,
+        ["Tushita"] = true,
+        ["Canvander"] = true,
+        ["Buddy Sword"] = true,
+        ["Twin Hooks"] = true,
+        ["Hallow Scythe"] = true,
+        ["Cursed Dual Katana"] = true,
+    },
+
+    ["Gun"] = {
+        -- : World 2
+        ["Kabucha"] = true,
+        -- : World 3
+        ["Venom Bow"] = true,
+        ["Skull Guitar"] = true,
+    },
+
+    ["Mastery"] = {
+        ["Melee"] = true,
+        ["Sword"] = true,
+        ["Devil Fruits"] = true,
+
+        ["Configs"] = {
+            ["Selected All Sword"] = true,
+            ["Select Sword"] = {"Saber","Cursed Dual Katana"},
+        }
+    },
+
+    ["Race"] = {
+        ["v2"] = true,
+        ["v3"] = true,
+        ["Locked"] = {
+            ["Mink"] = true,
+            ["Human"] = true,
+            ["Skypiea"] = true,
+            ["Fishman"] = true,
+        },
+    },
+
+    ["Fruit"] = {
+        ["Main Fruit"] = {"Dough-Dough"},
+        ["Sec Fruit"] = {"Flame-Flame", "Ice-Ice", "Quake-Quake", "Light-Light", "Dark-Dark", "Spider-Spider", "Rumble-Rumble", "Magma-Magma", "Buddha-Buddha"},
+        ["Safe Fruit"] = {
+            "Dough-Dough",
+            "Dragon-Dragon"
+        },
+    },
+
+    ["Quest"] = {
+        ["Rainbow Haki"] = true,
+        ["Pull Lever"] = true,
+        ["Musketeer Hat"] = true,
+        ["Dough Mirror"] = true,
+        ["Shark Anchor"] = {
+            ["Enable"] = true,
+            ["Money"] = 25_000_000,
+        },
+    },
+
+    ["Currency"] = {
+        ["Lock Fragment"] = 30_000,
+    },
+
+    ["Performance"] = {
+        ["White Screen"] = false,
+        ["Booster FPS"] = false,
+        ["Lock FPS"] = 240,
+        ["AFK Timeout"] = 150,
+    },
+}
+
+loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/73mkp0aqyfo4ypy8hvl0nz10lq49fey5.lua"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zam2109/zam2109-HUB/refs/heads/main/advertismentGUI"))()
+
+-- Tạo GUI chính
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.CoreGui
+
+local Frame = Instance.new("Frame", ScreenGui)
+Frame.Size = UDim2.new(0, 320, 0, 150)
+Frame.Position = UDim2.new(0.5, -160, 0.5, -75)
+Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Frame.BorderSizePixel = 0
+Frame.Active = true
+Frame.Draggable = true
+Frame.Visible = true -- GUI mặc định bật
+
+-- Bo góc GUI
+local UICorner = Instance.new("UICorner", Frame)
+UICorner.CornerRadius = UDim.new(0, 12)
+
+-- Viền cầu vồng động
+local RainbowBorder = Instance.new("Frame", Frame)
+RainbowBorder.Size = UDim2.new(1, 6, 1, 6)
+RainbowBorder.Position = UDim2.new(0, -3, 0, -3)
+RainbowBorder.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+RainbowBorder.BorderSizePixel = 0
+RainbowBorder.ZIndex = -1
+
+local RainbowCorner = Instance.new("UICorner", RainbowBorder)
+RainbowCorner.CornerRadius = UDim.new(0, 14)
+
+local function updateRainbow()
+    local hue = 0
+    while RainbowBorder.Parent do
+        hue = (hue + 1) % 360
+        RainbowBorder.BackgroundColor3 = Color3.fromHSV(hue / 360, 1, 1)
+        wait(0.05)
+    end
+end
+spawn(updateRainbow)
+
+-- Thanh tiêu đề để kéo GUI trên Mobile
+local DragFrame = Instance.new("TextLabel", Frame)
+DragFrame.Size = UDim2.new(1, 0, 0, 25)
+DragFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+DragFrame.Text = "zam2109 HUB | Job ID Manager"
+DragFrame.TextColor3 = Color3.fromRGB(255, 255, 255)
+DragFrame.TextSize = 14
+DragFrame.Font = Enum.Font.SourceSans
+DragFrame.TextXAlignment = Enum.TextXAlignment.Left
+
+local DragCorner = Instance.new("UICorner", DragFrame)
+DragCorner.CornerRadius = UDim.new(0, 12)
+
+-- Ô nhập Job ID
+local JobIdBox = Instance.new("TextBox", Frame)
+JobIdBox.Size = UDim2.new(1, -20, 0, 30)
+JobIdBox.Position = UDim2.new(0, 10, 0, 35)
+JobIdBox.PlaceholderText = "Nhập Job ID..."
+JobIdBox.Text = ""
+JobIdBox.TextSize = 14
+JobIdBox.Font = Enum.Font.SourceSans
+JobIdBox.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+JobIdBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+local JobCorner = Instance.new("UICorner", JobIdBox)
+JobCorner.CornerRadius = UDim.new(0, 8)
+
+-- Nút Join Server
+local JoinButton = Instance.new("TextButton", Frame)
+JoinButton.Size = UDim2.new(1, -20, 0, 30)
+JoinButton.Position = UDim2.new(0, 10, 0, 70)
+JoinButton.Text = "Join Server"
+JoinButton.TextSize = 14
+JoinButton.Font = Enum.Font.SourceSans
+JoinButton.BackgroundColor3 = Color3.fromRGB(50, 200, 50)
+JoinButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+local JoinCorner = Instance.new("UICorner", JoinButton)
+JoinCorner.CornerRadius = UDim.new(0, 8)
+
+-- Nút Get Job ID
+local GetJobIdButton = Instance.new("TextButton", Frame)
+GetJobIdButton.Size = UDim2.new(1, -20, 0, 30)
+GetJobIdButton.Position = UDim2.new(0, 10, 0, 105)
+GetJobIdButton.Text = "Get Job ID & Copy"
+GetJobIdButton.TextSize = 14
+GetJobIdButton.Font = Enum.Font.SourceSans
+GetJobIdButton.BackgroundColor3 = Color3.fromRGB(50, 100, 200)
+GetJobIdButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+local GetCorner = Instance.new("UICorner", GetJobIdButton)
+GetCorner.CornerRadius = UDim.new(0, 8)
+
+-- Chức năng Join Server theo Job ID
+JoinButton.MouseButton1Click:Connect(function()
+    local jobId = JobIdBox.Text
+    if jobId and jobId ~= "" then
+        game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, jobId, game.Players.LocalPlayer)
+    else
+        warn("Vui lòng nhập Job ID hợp lệ!")
+    end
+end)
+
+-- Chức năng lấy Job ID & Copy vào clipboard
+GetJobIdButton.MouseButton1Click:Connect(function()
+    local jobId = game.JobId
+    JobIdBox.Text = jobId
+    if setclipboard then
+        setclipboard(jobId)
+    else
+        warn("Không thể copy Job ID (trình duyệt không hỗ trợ)")
+    end
+end)
+
+-- Nút Toggle tròn có ảnh
+local ToggleButton = Instance.new("ImageButton", ScreenGui)
+ToggleButton.Size = UDim2.new(0, 50, 0, 50)
+ToggleButton.Position = UDim2.new(0.05, 0, 0.05, 0)
+ToggleButton.BackgroundTransparency = 1 -- Làm trong suốt nền
+ToggleButton.Image = "rbxassetid://YOUR_IMAGE_ID_ON" -- Thay YOUR_IMAGE_ID_ON bằng ID ảnh bật
+
+-- Kéo nút Toggle trên PC & Mobile
+local UserInputService = game:GetService("UserInputService")
+local dragging, dragStart, startPos
+
+local function updateInput(input)
+    local delta = input.Position - dragStart
+    ToggleButton.Position = UDim2.new(0, startPos.X.Offset + delta.X, 0, startPos.Y.Offset + delta.Y)
+end
+
+ToggleButton.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = ToggleButton.Position
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+        updateInput(input)
+    end
+end)
+
+-- Chức năng bật/tắt GUI khi nhấn Toggle
+ToggleButton.MouseButton1Click:Connect(function()
+    Frame.Visible = not Frame.Visible
+    if Frame.Visible then
+        ToggleButton.Image = "rbxassetid://82145301120414" -- Thay bằng ID ảnh bật
+    else
+        ToggleButton.Image = "rbxassetid://82145301120414" -- Thay bằng ID ảnh tắt
+    end
+end)
