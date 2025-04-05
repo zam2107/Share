@@ -1,47 +1,68 @@
--- Max level, godhuman, cdk, sgt
-script_key = "" -- premium only, u can leave it blank if ur not
-getgenv().Shutdown = false -- Turn on if u are farming bulk accounts
-getgenv().Configs = {
-    ["Team"] = "Marines",
-    ["FPS Boost"] = {
-        ["Enable"] = false,
-        ["FPS Cap"] = 30,
-    },
-    ["Farm Boss Drops"] = {
-        ["Enable"] = false,
-        ["When x2 Exp Expired"] = false
-    },
-    ["Hop"] = { -- premium only
-        ["Enable"] = false,
-        ["Hop Find Tushita"] = true,
-        ["Hop Find Valkyrie Helm"] = true,
-        ["Hop Find Mirror Fractal"] = true
-    },
-    ["Farm Mastery"] = {
-        ["Enable"] = true,
-        ["Farm Mastery Weapons"] = {"Sword", "Gun", "Blox Fruit"}, -- Blox Fruit, Gun (left -> right: High -> Low Priority)
-        ["Swords To Farm"] = {"Cursed Dual Katana"},
-        ["Guns To Farm"] = {"Skull Guitar"},
-        ["Mastery Health (%)"] = 40 -- For Blox Fruit, Gun
-    },
-    ["Auto Spawn rip_indra"] = true,
-    ["Auto Spawn Dough King"] = true,
-    ["Auto Pull Lever"] = true,
-    ["Auto Collect Berry"] = false,
-    ["Auto Evo Race"] = true,
-    ["Awaken Fruit"] = true,
-    ["Rainbow Haki"] = true,
-    ["Hop Player Near"] = true,
-    ["Skull Guitar"] = true,
-    ["Find Fruit"] = false, -- Will find 1m+ fruit to unlock swan door to access third sea
-    ["Cursed Dual Katana"] = true,
-    ["Switch Melee"] = true,
-    ["Eat Fruit"] = "", -- leave blank for none, put the fruit name like this example: Smoke Fruit, T-Rex Fruit, ...
-    ["Snipe Fruit"] = "", -- leave blank for none, put the fruit name like this example: Smoke Fruit, T-Rex Fruit, ...
-    ["Lock Fragment"] = 0,
-    ["Buy Stuffs"] = true -- buso, geppo, soru, ken haki, ...
+_G.KaitunConfig = {
+    ["Start Farm"] = true,
+    ["Auto Fruit"] = true,
+    ["RedeemCode Level"] = 2,
+    ["white screen"] = false,
+    ["Ui Screen"] = false,
+    ["LimitFragment"] = 100000,
+
+    ["Buy Base Sword"] = true,
+    ["Boss List"] = {
+        "The Saw [Lv. 100] [Boss]",
+        "Greybeard [Lv. 750] [Raid Boss]",
+        "Darkbeard [Lv. 1000] [Raid Boss]",
+        "Cursed Captain [Lv. 1325] [Raid Boss]",
+        "Captain Elephant [Lv. 1875] [Boss]",
+        "Soul Reaper [Lv. 2100] [Raid Boss]",
+        "Dough King [Lv. 2300] [Raid Boss]",
+        "Cake Prince [Lv. 2300] [Raid Boss]",
+        "rip_indra True Form [Lv. 5000] [Raid Boss]",
+        "Beautiful Pirate [Lv. 1950] [Boss]",
+        "Cake Queen [Lv. 2175] [Boss]"
+    },
+
+    ["PlayerHunter"] = true,
+    ["Player Hunter Hop"] = true,
+
+    ["Auto Factory"] = true,
+    ["Rengoku"] = true,
+    ["Sea 3 Hop"] = true,
+    ["Race v3"] = true,
+    ["Skip Race v3"] = true,
+    ["Instance Soul Guitar"] = false,
+    
+    ["CDK"] = true,
+    ["Tushita"] = true,
+    ["Yama"] = true,
+    ["Soul Guitar"] = true,
+    ["Pull Lever"] = true,
+
+    ["Farm When Lvl Max"] = "Katakuri",
+    ["Ghoul Race"] = false,
+    ["Race Lock"] = {"Human","Mink","Fishman"},
+    ["FPS Cap"] = 60,
+
+    ["Buy Haki Color"] = true,
+    ["Auto Legendary Sword"] = true,
+    ["Auto TTK"] = true,
+
+    ["Mastery Sword"] = true,
+    ["Select Rarity"] = {"Mythical","Legendary"},
+
+    ["Select Main Devil Fruit Sniper"] = {"Kitsune-Kitsune"},
+    ["Select Sub Devil Fruit Sniper"] = {"Dragon-Dragon"},
+    ["Allow Eat Fruit In Inventory"] = false,
+    ["Start Sniper"] = true,
+    ["Safe Fruit"] = {"Dragon-Dragon","Spirit-Spirit","Venom-Venom","Dough-Dough","Kitsune-Kitsune","Leopard-Leopard"},
+
+    ["Link Webhook"] = "https://discord.com/api/webhooks/1357942164683886755/DfmtMEwokOyRScKvp2yz8CPiOCsFqvHSTJ3AFsxlQQa8_Rl1wPSoUUyOvVgKfSJtqLSk",
+    ["Start Webhook"] = true,
+    ["Webhook Mode"] = "Send Every .. min",
+    ["Webhook Minute"] = 1,
+    ["tag user"] = false,
+    ["Send Test Webhook"] = true,
 }
-repeat task.wait() pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/kaitun.lua"))() end) until getgenv().Check_Execute
+loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/73mkp0aqyfo4ypy8hvl0nz10lq49fey5.lua"))()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/zam2109/zam2109-HUB/refs/heads/main/advertismentGUI"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/zam2109/zam2109-HUB/refs/heads/main/JOB.ID.MANAGER"))()
