@@ -42,7 +42,7 @@ getgenv().ConfigsKaitun = {
     ["Mastery"] = {
         ["Melee"] = true,
         ["Sword"] = true,
-        ["Devil Fruits"] = true,
+        ["Devil Fruits"] = false,
 
         ["Configs"] = {
             ["Selected All Sword"] = true,
