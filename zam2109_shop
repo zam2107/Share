@@ -53,7 +53,7 @@ _G.KaitunConfig = {
     ["Select Sub Devil Fruit Sniper"] = {"Dragon-Dragon"},
     ["Allow Eat Fruit In Inventory"] = false,
     ["Start Sniper"] = true,
-    ["Safe Fruit"] = {"Dragon-Dragon","Spirit-Spirit","Venom-Venom","Dough-Dough","Kitsune-Kitsune","Leopard-Leopard"},
+    ["Safe Fruit"] = {"Dragon-Dragon","Spirit-Spirit","Venom-Venom","Dough-Dough","Kitsune-Kitsune","Leopard-Leopard","Mammoth-Mammoth"},
 
     ["Link Webhook"] = "https://discord.com/api/webhooks/1357942164683886755/DfmtMEwokOyRScKvp2yz8CPiOCsFqvHSTJ3AFsxlQQa8_Rl1wPSoUUyOvVgKfSJtqLSk",
     ["Start Webhook"] = true,
